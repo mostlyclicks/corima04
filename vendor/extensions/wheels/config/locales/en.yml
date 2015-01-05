@@ -1,0 +1,42 @@
+en:
+  refinery:
+    plugins:
+      wheels:
+        title: Wheels
+    wheels:
+      admin:
+        wheels:
+          actions:
+            create_new: Add New Wheel
+            reorder: Reorder Wheels
+            reorder_done: Done Reordering Wheels
+          records:
+            title: Wheels
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Wheels yet. Click "Add New Wheel" to add your first wheel.
+          wheel:
+            view_live_html: View this wheel live <br/><em>(opens in a new window)</em>
+            edit: Edit this wheel
+            delete: Remove this wheel forever
+      wheels:
+        show:
+          other: Other Wheels
+  activerecord:
+    attributes:
+      'refinery/wheels/wheel':
+        name: Name
+        rim_type: Rim Type
+        diameter: Diameter
+        front_rear: Front Rear
+        type_of_use: Type Of Use
+        width: Width
+        profile: Profile
+        spoke_count: Spoke Count
+        spoke_type: Spoke Type
+        hub_type: Hub Type
+        hub_finish: Hub Finish
+        carbon_weave: Carbon Weave
+        weight: Weight
+        max_air_pressure: Max Air Pressure
+        model: Model
+        related_wheel_id: Related Wheel

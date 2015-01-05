@@ -1,0 +1,42 @@
+sk:
+  refinery:
+    plugins:
+      wheels:
+        title: Wheels
+    wheels:
+      admin:
+        wheels:
+          actions:
+            create_new: Pridať Wheel
+            reorder: Preusporiadať Wheels
+            reorder_done: Koniec radenia Wheels
+          records:
+            title: Wheels
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Wheels. Kliknite na "Pridať Wheel" pre pridanie prvého wheel.
+          wheel:
+            view_live_html: Zobraziť náhľad wheel<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť wheel
+            delete: Zmazať wheel
+      wheels:
+        show:
+          other: Daľšie Wheels
+  activerecord:
+    attributes:
+      'refinery/wheels/wheel':
+        name: Name
+        rim_type: Rim Type
+        diameter: Diameter
+        front_rear: Front Rear
+        type_of_use: Type Of Use
+        width: Width
+        profile: Profile
+        spoke_count: Spoke Count
+        spoke_type: Spoke Type
+        hub_type: Hub Type
+        hub_finish: Hub Finish
+        carbon_weave: Carbon Weave
+        weight: Weight
+        max_air_pressure: Max Air Pressure
+        model: Model
+        related_wheel_id: Related Wheel

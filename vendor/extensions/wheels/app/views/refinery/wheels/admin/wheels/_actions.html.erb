@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Wheels::Admin::WheelsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.wheels_admin_wheels_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_wheels_admin_wheel_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Wheels::Admin::WheelsController.sortable? && ::Refinery::Wheels::Wheel.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Wheels"),
+                 refinery.wheels_admin_wheels_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Wheels"),
+                 refinery.wheels_admin_wheels_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>

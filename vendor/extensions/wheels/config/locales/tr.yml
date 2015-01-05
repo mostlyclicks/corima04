@@ -1,0 +1,42 @@
+tr:
+  refinery:
+    plugins:
+      wheels:
+        title: Wheels
+    wheels:
+      admin:
+        wheels:
+          actions:
+            create_new: Yeni Ekle Wheel
+            reorder: Tekrar sirala Wheels
+            reorder_done: Tekrar siralama tamamlandiWheels
+          records:
+            title: Wheels
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Wheels yok henuz.  Tikla "Yeni Ekle Wheel" eklemek senin ilk wheel.
+          wheel:
+            view_live_html: Bunu canlu wheel goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle wheel
+            delete: Bunu Sil wheel sonsuza dek
+      wheels:
+        show:
+          other: Diger Wheels
+  activerecord:
+    attributes:
+      'refinery/wheels/wheel':
+        name: Name
+        rim_type: Rim Type
+        diameter: Diameter
+        front_rear: Front Rear
+        type_of_use: Type Of Use
+        width: Width
+        profile: Profile
+        spoke_count: Spoke Count
+        spoke_type: Spoke Type
+        hub_type: Hub Type
+        hub_finish: Hub Finish
+        carbon_weave: Carbon Weave
+        weight: Weight
+        max_air_pressure: Max Air Pressure
+        model: Model
+        related_wheel_id: Related Wheel

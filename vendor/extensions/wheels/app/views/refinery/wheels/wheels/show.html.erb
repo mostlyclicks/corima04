@@ -1,0 +1,117 @@
+<% content_for :body_content_title do %>
+  <%= @wheel.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @wheel.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Rim Type</h1>
+    <p>
+      <%=raw @wheel.rim_type %>
+    </p>
+  </section>
+  <section>
+    <h1>Diameter</h1>
+    <p>
+      <%=raw @wheel.diameter %>
+    </p>
+  </section>
+  <section>
+    <h1>Front Rear</h1>
+    <p>
+      <%=raw @wheel.front_rear %>
+    </p>
+  </section>
+  <section>
+    <h1>Type Of Use</h1>
+    <p>
+      <%=raw @wheel.type_of_use %>
+    </p>
+  </section>
+  <section>
+    <h1>Width</h1>
+    <p>
+      <%=raw @wheel.width %>
+    </p>
+  </section>
+  <section>
+    <h1>Profile</h1>
+    <p>
+      <%=raw @wheel.profile %>
+    </p>
+  </section>
+  <section>
+    <h1>Spoke Count</h1>
+    <p>
+      <%=raw @wheel.spoke_count %>
+    </p>
+  </section>
+  <section>
+    <h1>Spoke Type</h1>
+    <p>
+      <%=raw @wheel.spoke_type %>
+    </p>
+  </section>
+  <section>
+    <h1>Hub Type</h1>
+    <p>
+      <%=raw @wheel.hub_type %>
+    </p>
+  </section>
+  <section>
+    <h1>Hub Finish</h1>
+    <p>
+      <%=raw @wheel.hub_finish %>
+    </p>
+  </section>
+  <section>
+    <h1>Carbon Weave</h1>
+    <p>
+      <%=raw @wheel.carbon_weave %>
+    </p>
+  </section>
+  <section>
+    <h1>Weight</h1>
+    <p>
+      <%=raw @wheel.weight %>
+    </p>
+  </section>
+  <section>
+    <h1>Max Air Pressure</h1>
+    <p>
+      <%=raw @wheel.max_air_pressure %>
+    </p>
+  </section>
+  <section>
+    <h1>Model</h1>
+    <p>
+      <%=raw @wheel.model %>
+    </p>
+  </section>
+  <section>
+    <h1>Related Wheel</h1>
+    <p>
+      <%=raw @wheel.related_wheel_id %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="wheels">
+      <% @wheels.each do |wheel| %>
+        <li>
+          <%= link_to wheel.name, refinery.wheels_wheel_path(wheel) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

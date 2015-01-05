@@ -1,0 +1,90 @@
+<%= form_for [refinery, :wheels_admin, @wheel] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @wheel,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :name -%>
+    <%= f.text_field :name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :rim_type -%>
+    <%= f.text_field :rim_type -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :diameter -%>
+    <%= f.text_field :diameter -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :front_rear -%>
+    <%= f.text_field :front_rear -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :type_of_use -%>
+    <%= f.text_field :type_of_use -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :width -%>
+    <%= f.text_field :width -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :profile -%>
+    <%= f.text_field :profile -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :spoke_count -%>
+    <%= f.text_field :spoke_count -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :spoke_type -%>
+    <%= f.text_field :spoke_type -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :hub_type -%>
+    <%= f.text_field :hub_type -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :hub_finish -%>
+    <%= f.text_field :hub_finish -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :carbon_weave -%>
+    <%= f.text_field :carbon_weave -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :weight -%>
+    <%= f.number_field :weight -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :max_air_pressure -%>
+    <%= f.text_field :max_air_pressure -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :model -%>
+    <%= f.text_field :model -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :related_wheel_id -%>
+    <%= f.number_field :related_wheel_id -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.wheels.admin.wheels.wheel'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @wheel.name) -%>
+<% end -%>
