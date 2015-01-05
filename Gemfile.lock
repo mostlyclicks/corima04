@@ -31,6 +31,8 @@ GEM
       multi_json (~> 1.0)
     acts_as_indexed (0.8.3)
     arel (3.0.3)
+    autoprefixer-rails (4.0.2.2)
+      execjs
     awesome_nested_set (2.1.6)
       activerecord (>= 3.0.0)
     babosa (0.3.11)
@@ -265,6 +267,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  autoprefixer-rails
   bootstrap-sass
   coffee-rails (~> 3.2.1)
   fog
